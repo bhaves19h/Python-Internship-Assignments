@@ -1,62 +1,98 @@
 PYTHON-INTERNSHIP-ASSIGNMENTS
 Master Logic, Unlock Infinite Possibilities
 
-last-commit repo-top-language repo-language-count
-Built with the tools and technologies:
+📌 Last Commit • 🧠 Repo Top Language: Python • 🗂️ Languages Used: Python, Markdown
+🚀 Built with the Tools and Technologies
+Python
 
-Markdown Python
+Markdown
 
-Table of Contents
+📚 Table of Contents
 Overview
+
 Getting Started
+
 Prerequisites
+
 Installation
+
 Usage
+
 Testing
-Overview
-Python-Internship-Assignments is a curated collection of Python programs aimed at enhancing your understanding of conditionals and operators. It serves as an educational resource and practical toolkit for developers looking to reinforce core programming concepts.
 
-Why Python-Internship-Assignments?
+📖 Overview
+Python-Internship-Assignments is a curated collection of Python programs designed to strengthen your understanding of conditionals and operators. It serves as an educational resource and practical toolkit for learners and developers who want to build a strong foundation in core Python logic.
 
-This project helps you build a solid foundation in Python logic and decision-making. The core features include:
+🎯 Why Python-Internship-Assignments?
+This project focuses on essential problem-solving skills using Python. Key features include:
 
-🧩 🔧 Utility Modules: Includes scripts for odd/even classification, swapping values, and arithmetic calculations, streamlining common coding tasks.
-🎯 📝 Decision Support: Implements voting eligibility, leap year checks, and triangle validation to support real-world decision-making scenarios.
-🔐 🔑 User Validation: Features user verification and authentication scripts to enhance security workflows.
-📊 📐 Mathematical & Geometric Tools: Provides tools for calculating areas, squares, cubes, and identifying smallest values, supporting mathematical operations.
-🧠 🎓 Educational Focus: Designed to reinforce fundamental programming concepts for learners and developers alike.
-Getting Started
-Prerequisites
-This project requires the following dependencies:
+🧩 Utility Modules:
+Scripts for odd/even classification, value swapping, and arithmetic operations to streamline coding tasks.
 
-Programming Language: Python
-Package Manager: Conda
-Installation
-Build Python-Internship-Assignments from the source and install dependencies:
+📝 Decision Support:
+Real-world programs for checking voting eligibility, leap year logic, and triangle validation.
 
+🔐 User Validation:
+Basic user verification and authentication scripts that enhance security workflows.
+
+📊 Mathematical & Geometric Tools:
+Programs to compute areas, squares, cubes, and determine the smallest of values.
+
+🧠 Educational Focus:
+Every script is crafted to reinforce basic yet powerful programming concepts.
+
+🛠 Getting Started
+✅ Prerequisites
+Ensure you have the following:
+
+Python installed
+
+Conda as your package manager
+
+📥 Installation
 Clone the repository:
 
-❯ git clone https://github.com/bhaves19h/Python-Internship-Assignments
+bash
+Copy
+Edit
+git clone https://github.com/bhaves19h/Python-Internship-Assignments
 Navigate to the project directory:
 
-❯ cd Python-Internship-Assignments
-Install the dependencies:
+bash
+Copy
+Edit
+cd Python-Internship-Assignments
+Create the environment with Conda:
 
-Using conda:
+bash
+Copy
+Edit
+conda env create -f conda.yml
+▶️ Usage
+Activate the environment:
 
-❯ conda env create -f conda.yml
-Usage
-Run the project with:
-
-Using conda:
-
+bash
+Copy
+Edit
 conda activate {venv}
+Run the main script:
+
+bash
+Copy
+Edit
 python {entrypoint}
-Testing
-Python-internship-assignments uses the {test_framework} test framework. Run the test suite with:
+🧪 Testing
+The project uses the {test_framework} test framework.
 
-Using conda:
+Activate the environment:
 
+bash
+Copy
+Edit
 conda activate {venv}
+Run the test suite:
+
+bash
+Copy
+Edit
 pytest
-⬆ Return
