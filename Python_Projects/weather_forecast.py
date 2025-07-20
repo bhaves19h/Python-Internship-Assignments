@@ -1,47 +1,45 @@
-#c9afe899a2372d4b00cc5d051a956692
-
 import requests
 
-# Replace this with your actual API key from OpenWeatherMap
+# Got this key from OpenWeatherMap — hope it's still valid
 API_KEY = 'e642268ba29a079af176e0844f2045f3'
 
-# Base URL for the OpenWeatherMap current weather API
+# Standard URL for getting current weather
 BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
 
-# Get city name from user
-city = input("Enter city name: ").strip()
+# Ask the user to enter the city name
+city = input("Enter city name: ").strip()  # just trimming extra spaces
 
-# Prepare request parameters
+# Putting together the stuff we need to send to the API
 params = {
     'q': city,
     'appid': API_KEY,
-    'units': 'metric'  # To get temperature in Celsius
+    'units': 'metric'  # Celsius — no one wants Kelvin...
 }
 
-# Make the API request
+# Trying to make the request — fingers crossed
 try:
     response = requests.get(BASE_URL, params=params)
 
+    # If everything went fine
     if response.status_code == 200:
-        # Successful response
         data = response.json()
 
-        # Extract weather description and temperature
-        weather_desc = data['weather'][0]['description'].capitalize()
+        # Getting weather and temperature info
+        weather = data['weather'][0]['description']
         temp = data['main']['temp']
 
-        # Display the weather info
-        print(f"\nWeather in {city}: {weather_desc}")
+        print(f"\nWeather in {city}: {weather.capitalize()}")
         print(f"Temperature: {temp}°C")
 
     elif response.status_code == 404:
-        # City not found
-        print("City not found. Please check the spelling and try again.")
+        # So probably the city name is wrong
+        print("Oops... couldn't find that city. Maybe check the spelling?")
+
     else:
-        # Some other error occurred
-        print(f"Error fetching data. Status Code: {response.status_code}")
+        # No idea what went wrong but it wasn't good
+        print(f"Something went wrong! Status Code: {response.status_code}")
 
 except requests.exceptions.RequestException as e:
-    # Handle any network-related errors (e.g., no internet)
-    print("Failed to connect to the weather service.")
-    print("Error:", e)
+    # Most likely no internet or some server issue
+    print("Could not connect to the weather service.")
+    print("Details:", e)
